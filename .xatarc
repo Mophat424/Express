@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Raizo-Cruz-s-workspace-v0bsjk.us-east-1.xata.sh/db/CRUDop",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
