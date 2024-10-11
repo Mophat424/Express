@@ -26,7 +26,7 @@ const deleteProductA = async () => {
     const xata = getXataClient();
 
   try {
-    // Delete Product A by its xata_id
+    
     const record = await xata.db.products.delete("rec_cs31vunae1bq9a91pptg");
     console.log(`Product A has been deleted:`, record);
   } catch (error) {
@@ -49,4 +49,14 @@ const fetchProducts = async () => {
 };
 
 fetchProducts();
+
+
+async function updateProduct(productId: string, updatedData: { Name?: string; Description?: string; Price?: number; Quantity?: number }) {
+  try {
+    const updatedProduct = await xata.db.products.update(productId, updatedData);
+    console.log('Product updated:', updatedProduct);
+  } catch (error) {
+    console.error(`Error updating product with ID ${productId}:`, error);
+  }
+}
     
